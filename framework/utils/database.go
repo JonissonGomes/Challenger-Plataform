@@ -11,7 +11,9 @@ import (
 
 func ConnectDatabase() *gorm.DB {
 
-	err := godotenv.Load()
+	dotEnvPath := "../../../.env"
+
+	err := godotenv.Load(dotEnvPath)
 
 	if err != nil {
 		log.Fatalf("Error loading .env file: %v", err)
