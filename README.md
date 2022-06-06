@@ -21,6 +21,13 @@ Para instalar o BCrypt, basta utilizar o seguinte comando:
 go get golang.org/x/crypto/bcrypt
 ```
 
+- UUID
+
+Para instalar o BCrypt, basta utilizar o seguinte comando:
+```
+go get github.com/satori/go.uuid
+```
+
 # Como instalar essas dependências
 Utilizando o `go get "url_do_pacote"` você consegue estar instalando a dependências dentro do seu projeto 
 
