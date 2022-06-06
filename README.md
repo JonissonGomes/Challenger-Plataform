@@ -29,9 +29,17 @@ go get github.com/satori/go.uuid
 ```
 
 - GO RM
+
 Para instalar o Go RM, basta utilizar o seguinte comando:
 ```
 go get github.com/jinzhu/gorm
+```
+
+- GO DotEnv
+
+Para instalar o Go DotEnv, basta utilizar o seguinte comando:
+```
+go get github.com/joho/godotenv
 ```
 
 # Como instalar essas dependências
