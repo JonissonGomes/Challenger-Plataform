@@ -9,10 +9,10 @@ import (
 
 type User struct {
 	BaseStructModel
-	Name     string
-	Email    string
-	Password string
-	TokenId  string
+	Name     string `gorm:"type:varchar(255)"`
+	Email    string `gorm:"type:varchar(255);unique_index"`
+	Password string `gorm:"type:varchar(255)"`
+	TokenId  string `gorm:"type:varchar(255);unique_index"`
 }
 
 func (user *User) Prepare() error {
