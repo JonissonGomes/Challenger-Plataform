@@ -15,6 +15,10 @@ type BaseStructModel struct {
 	DeletedAt time.Timer `json:"deleted_at" gorm:"type:datetime" sql:"index"`
 }
 
+func CreateNewUser() *User {
+	return &User{}
+}
+
 func (base *BaseStructModel) BeforCreate(scope *gorm.Scope) error {
 	err := scope.SetColumn("ID", uuid.NewV4().String())
 
