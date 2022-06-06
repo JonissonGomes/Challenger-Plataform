@@ -3,7 +3,7 @@ package domain
 import (
 	"log"
 
-	uuid "github.com/stori/go.uuid"
+	uuid "github.com/satori/go.uuid"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -23,6 +23,7 @@ func (user *User) Prepare() error {
 	// Tratando erros
 	if err != nil {
 		log.Fatalf("Error in duration password generation: %v", err)
+		return err
 	}
 
 	// Atribuindo senha encriptada
@@ -30,4 +31,17 @@ func (user *User) Prepare() error {
 
 	// Gerando Token automático
 	user.TokenId = uuid.NewV4().String()
+
+	err = user.validateField()
+
+	if err != nil {
+		log.Fatalf("Error during the user validate: %v", err)
+		return err
+	}
+
+	return nil
+}
+
+func (user User) validateField() error {
+	return nil
 }
