@@ -23,9 +23,15 @@ go get golang.org/x/crypto/bcrypt
 
 - UUID
 
-Para instalar o BCrypt, basta utilizar o seguinte comando:
+Para instalar o UUID, basta utilizar o seguinte comando:
 ```
 go get github.com/satori/go.uuid
+```
+
+- GO RM
+Para instalar o Go RM, basta utilizar o seguinte comando:
+```
+go get github.com/jinzhu/gorm
 ```
 
 # Como instalar essas dependências
