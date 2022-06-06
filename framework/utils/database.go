@@ -18,7 +18,7 @@ func ConnectDatabase() *gorm.DB {
 	}
 
 	// Lê o arquivo no .env
-	readConnectionDatabase := os.Getenv("connectionDB")
+	readConnectionDatabase := os.Getenv("dsn")
 
 	// Conecta com o banco
 	connectDatabase, err := gorm.Open("postgres", readConnectionDatabase)
